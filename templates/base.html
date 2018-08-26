@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Blockchane test</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+ </head>
+ <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto mt-5">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto mt-5 text-center">
+
+                <form action="{{ url_for('check') }}" method="GET">
+                    <button type="submit" class="btn btn-success">Check integrity</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mx-auto mt-5">
+                {% block checking %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+    </div>
+
+
+
+ </body>
+</html>
